@@ -31,6 +31,47 @@ main {
     border-radius: 30px;
 }
 
+/*-------Animation part start--------*/
+.banner:hover {
+    background-image: url(/images/brazil-team.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes animate {
+    0% {
+        background-image: url(/images/portugal.jpg);
+    }
+
+    20% {
+        background-image: url(/images/argentina.jpg);
+    }
+
+    40% {
+        background-image: url(/images/france.jpg);
+    }
+
+    60% {
+        background-image: url(/images/germany.jpg);
+    }
+
+    100% {
+        background-image: url(/images/brazil-team.jpg);
+    }
+
+}
+
+/*-----------Animation part end-------*/
+
 .banner-detail {
     width: 50%;
     margin-top: 40px;
@@ -82,7 +123,13 @@ main {
 /*----------------------------
    Middle section start
 ------------------------------*/
-.option {
+.middle-section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+.options {
     height: 200px;
     width: 200px;
     background-color: rgb(66, 62, 62);
@@ -95,8 +142,7 @@ main {
     margin-right: 15px;
 }
 
-.option a {
-    text-decoration: none;
+.option {
     height: 40px;
     width: 140px;
     background-color: white;
@@ -105,22 +151,24 @@ main {
     margin-right: 30px;
     padding: 10px 5px;
     border-radius: 10px;
+}
+
+.option a {
+    text-decoration: none;
+
+
     color: black;
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
 }
 
-.option .highlight {
+.highlight {
     background-color: red;
     color: white;
 }
 
 /* -----video part----*/
-.middle-section {
-    display: flex;
-    flex-direction: row;
-    margin-top: 30px;
-}
+
 
 .videos {
     display: grid;
@@ -171,7 +219,7 @@ main {
 
 .view-all-btn {
 
-    margin: 40px 450px;
+    margin: 40px 350px;
     display: none;
 }
 
@@ -188,7 +236,7 @@ main {
 /*--------------Footer Part-------------*/
 footer {
     background-color: black;
-    width: 100%;
+    width: 1240px;
     margin-top: 60px;
     align-items: center;
 }
@@ -248,14 +296,17 @@ hr {
     color: rgb(231, 68, 90);
 }
 
-/*--------mobile device------*/
+/*--------mobile device--------
+---------Resposiveness------*/
 @media only screen and (max-width:688px) {
-    .container {
+
+    .container,
+    .banner-detail {
         width: 100%;
     }
 
 
-
+    /*-----------banner part ------*/
     .banner {
 
         flex-direction: column;
@@ -264,17 +315,19 @@ hr {
         align-items: center;
     }
 
+    /*--------Middle part-----*/
     .middle-section {
         flex-direction: column;
         align-items: center;
     }
 
-    .option {
+    .options {
+
         background-color: white;
 
     }
 
-    .option a {
+    .option {
         border: 1px solid gray;
     }
 
@@ -283,7 +336,7 @@ hr {
         justify-content: center;
     }
 
-
+    /*--------Footer part--------*/
     footer {
         width: 100%;
     }
@@ -299,10 +352,86 @@ hr {
     .goal-title,
     .goal-info,
     .social-media-link {
+        width: 100%;
         flex-direction: column;
         align-items: center;
     }
 
+
+
+}
+
+/*-------Tablet device---------
+-----------Responsiveness-----*/
+@media only screen and (min-width:688px) and (max-width:992px) {
+
+    .container {
+        width: 100%;
+    }
+
+    /*-----MIddle part-----*/
+    .middle-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .options {
+
+        width: 100%;
+        flex-direction: row;
+        background-color: white;
+        align-items: center;
+        margin: 0;
+        padding-bottom: 0;
+        justify-content: center;
+    }
+
+    .option {
+        border: 1px solid gray;
+        padding-top: 22px;
+        text-align: center;
+    }
+
+    .videos {
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+    }
+
+    .view-all-btn {
+        display: block;
+    }
+
+    /*--------Footer part-----*/
+    footer {
+        width: 100%;
+    }
+
+    .goal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+
+    .goal-info {
+        width: 80%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-right: 100px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social-media-link {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
 
 
 }

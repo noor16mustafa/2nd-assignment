@@ -18,8 +18,9 @@ main {
 
 /*-----banner part start------*/
 .container {
-    width: 1000px;
+    width: 1050px;
     margin-top: 40px;
+
 
 }
 
@@ -89,6 +90,7 @@ main {
     align-items: center;
     text-align: center;
     padding-bottom: 22px;
+    margin-right: 15px;
 }
 
 .option a {
@@ -115,11 +117,129 @@ main {
 .middle-section {
     display: flex;
     flex-direction: row;
+    margin-top: 30px;
+}
+
+.videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
 }
 
 .video {
-    Width: 250px;
-    height: 362px;
+    Width: 266px;
+    height: 320px;
     background-color: white;
     border-radius: 5px;
+    border: 2px solid rgb(223, 222, 222);
 }
+
+.video img {
+    width: 100%;
+    height: 50%;
+}
+
+.video-info {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.video-info .btn {
+    padding: 4px 15px;
+    border-radius: 5px;
+    border-color: red;
+
+}
+
+.comment {
+    margin-left: 15px;
+}
+
+.comment span {
+    margin-right: 20px;
+}
+
+.comment .fa-clock,
+.fa-message {
+    color: rgb(95, 95, 172);
+    margin-right: 10px;
+}
+
+.view-all-btn {
+
+    margin: 40px 450px;
+    display: none;
+}
+
+.view-all-btn a {
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+
+}
+
+/*--------------Footer Part-------------*/
+footer {
+    background-color: black;
+    width: 100%;
+    margin-top: 60px;
+    align-items: center;
+}
+
+.goal {
+    width: 1000px;
+    margin: 50px 100px;
+    padding-top: 40px;
+
+}
+
+.goal h1 {
+    text-align: center;
+    color: white;
+    font-family: 'poppins', sans-serif;
+}
+
+hr {
+    border-top: 0.5px thin rgb(150, 135, 135);
+
+}
+
+.goal-info {
+    width: 800px;
+    margin: 40px 100px;
+}
+
+.goal-info a {
+    text-decoration: none;
+    font-family: 'poppins', sans-serif;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    padding: 5px 20px;
+
+}
+
+.social-media-link {
+    width: 300px;
+    margin: 0 440px;
+}
+
+.social-media-link a {
+    padding-right: 30px;
+}
+
+.fa-facebook,
+.fa-linkedin {
+    color: rgb(25, 144, 190);
+}
+
+.fa-instagram {
+    color: rgb(231, 68, 90);
+}
+
+/*--------mobile device------*/

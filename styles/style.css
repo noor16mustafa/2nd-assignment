@@ -32,17 +32,19 @@ main {
 }
 
 .banner-detail {
-    width: 400px;
+    width: 50%;
     margin-top: 40px;
     margin-left: 100px;
     padding-right: 40px;
+    display: flex;
+    flex-direction: column;
 
 }
 
 .banner-img {
-    height: 100%;
+
     margin-top: 50px;
-    margin-right: 80px;
+
 
 }
 
@@ -210,6 +212,8 @@ hr {
 }
 
 .goal-info {
+    display: flex;
+    flex-direction: row;
     width: 800px;
     margin: 40px 100px;
 }
@@ -225,6 +229,8 @@ hr {
 }
 
 .social-media-link {
+    display: flex;
+    flex-direction: row;
     width: 300px;
     margin: 0 440px;
 }
@@ -243,3 +249,60 @@ hr {
 }
 
 /*--------mobile device------*/
+@media only screen and (max-width:688px) {
+    .container {
+        width: 100%;
+    }
+
+
+
+    .banner {
+
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .middle-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .option {
+        background-color: white;
+
+    }
+
+    .option a {
+        border: 1px solid gray;
+    }
+
+    .videos {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+
+
+    footer {
+        width: 100%;
+    }
+
+    .goal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+
+    .goal-title,
+    .goal-info,
+    .social-media-link {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+}

@@ -177,6 +177,7 @@ main {
     grid-column-gap: 15px;
 }
 
+
 .video {
     Width: 266px;
     height: 320px;
@@ -232,6 +233,82 @@ main {
     border-radius: 5px;
 
 }
+
+/*---------------------------Css  middle part For UPCOMING MATCH website start-------------*/
+.upcoming-match {
+    width: 266px;
+    height: 200px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(223, 222, 222);
+}
+
+.flag {
+    display: flex;
+    flex-direction: row;
+    margin: 30px 25px;
+}
+
+.vs h1 {
+    font-family: 'poppins', 'sans-serif ';
+    font-size: 12px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.flag_img {
+    height: 57px;
+    width: 94px;
+
+}
+
+.match-details {
+    text-align: center;
+    font-family: 'poppins', 'sans-serif ';
+    margin-bottom: 30px;
+}
+
+.match-details p {
+    font-size: 12px;
+}
+
+/*---------------------------Css For UPCOMING MATCH website end-------------*/
+
+
+/*---------------------------Css middle part For All GROUP website START-------------*/
+.Allgroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 15px;
+    grid-column-gap: 15px;
+}
+
+.groups {
+    width: 280px;
+    height: 250px;
+    background-color: white;
+    border-radius: 5px;
+    border: 2px solid rgb(223, 222, 222);
+    display: flex;
+    flex-direction: column;
+}
+
+.country-flag img {
+    width: 250px;
+    height: 175px;
+    margin: 10px 10px;
+}
+
+
+
+.group-no {
+    text-align: center;
+    font-family: 'poppins', 'sans-serif ';
+    margin-bottom: 10px;
+}
+
+/*---------------------------Css For ALL GROUP website end-------------*/
+
 
 /*--------------Footer Part-------------*/
 footer {
@@ -296,8 +373,9 @@ hr {
     color: rgb(231, 68, 90);
 }
 
-/*--------mobile device--------
----------Resposiveness------*/
+/*------------------------------------mobile device--------
+---------------------------------------Resposiveness------*/
+
 @media only screen and (max-width:688px) {
 
     .container,
@@ -361,8 +439,9 @@ hr {
 
 }
 
-/*-------Tablet device---------
------------Responsiveness-----*/
+/*---------------------------------Tablet device---------
+-----------------------------------Responsiveness-----*/
+
 @media only screen and (min-width:688px) and (max-width:992px) {
 
     .container {
